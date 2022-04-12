@@ -1,8 +1,8 @@
-import HeroImages from "../HeroImages";
+import HeroImages from "../../components/HeroImages";
 import styles from "./HeroSection.module.css";
 
 const HeroSection = () => (
-  <section className={styles.section}>
+  <section className={styles.container}>
     <header className={styles.header}>
       <h1 className={styles.title}>Untitled Snakes Project</h1>
     </header>

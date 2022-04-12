@@ -13,7 +13,7 @@ const Layout = ({ children, title, description }: Props) => (
     <Head>
       <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
-      <meta property="description" content={description} />
+      <meta name="description" content={description} />
 
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} key="ogtitle" />

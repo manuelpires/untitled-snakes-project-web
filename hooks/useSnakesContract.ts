@@ -11,6 +11,7 @@ const useSnakesContract = () => {
   );
 
   const [isLoading, setIsLoading] = useState(true);
+  const [isSoldOut, setIsSoldOut] = useState(false);
 
   // CONTRACT CONSTANTS
   const [maxSupply, setMaxSupply] = useState<number>();
@@ -38,8 +39,9 @@ const useSnakesContract = () => {
       setIsSaleActive(contractIsSaleActive);
       const contractCurrentSupply = await contract.totalSupply();
       setCurrentSupply(contractCurrentSupply.toNumber());
+      setIsSoldOut(contractCurrentSupply.toNumber() === maxSupply);
     }
-  }, [contract]);
+  }, [contract, maxSupply]);
 
   // FIRST LOAD
   const runFirstLoad = useCallback(async () => {
@@ -62,12 +64,13 @@ const useSnakesContract = () => {
 
   return {
     contract,
+    currentSupply,
     isLoading,
+    isSaleActive,
+    isSoldOut,
     maxSupply,
     maxMintPerTx,
     price,
-    isSaleActive,
-    currentSupply,
     getContractConstants,
     getContractVariables,
   };

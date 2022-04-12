@@ -1,9 +1,13 @@
 import { ReactNode, MouseEvent } from "react";
+import classNames from "classnames/bind";
 import styles from "./Button.module.css";
+
+const cx = classNames.bind(styles);
 
 type Props = {
   children?: ReactNode;
   disabled?: boolean;
+  isSmall?: boolean;
   isRound?: boolean;
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
 };
@@ -11,11 +15,16 @@ type Props = {
 const Button = ({
   children,
   disabled = false,
+  isSmall = false,
   isRound = false,
   onClick = () => {},
 }: Props) => (
   <button
-    className={isRound ? styles.roundButton : styles.button}
+    className={cx({
+      button: !isRound,
+      small: isSmall,
+      roundButton: isRound,
+    })}
     disabled={disabled}
     onClick={onClick}
   >

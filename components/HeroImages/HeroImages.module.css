@@ -1,13 +1,12 @@
 .container {
-  width: 50%;
   display: grid;
-  grid-template-columns: 276px 276px;
-  grid-template-rows: 276px 276px;
+  grid-template-columns: 236px 236px;
+  grid-template-rows: 236px 236px;
+  gap: 40px;
 }
 
 .imageContainer {
-  max-width: 276px;
-  padding: 20px;
+  max-width: 236px;
 }
 
 .imageContainer img {
@@ -27,13 +26,13 @@
 
 @media (max-width: 767px) {
   .container {
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 150px 150px;
+    grid-template-columns: 134px 134px;
+    grid-template-rows: 134px 134px;
+    gap: 16px;
   }
 
   .imageContainer {
-    max-width: 150px;
-    padding: 8px;
+    max-width: 134px;
   }
 
   .imageContainer img {

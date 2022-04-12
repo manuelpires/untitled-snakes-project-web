@@ -6,7 +6,10 @@ import Separator from "../components/Separator";
 import styles from "../styles/Home.module.css";
 
 const Home = () => (
-  <Layout title="Untitled Snakes Project">
+  <Layout
+    title="Untitled Snakes Project"
+    description="NFT collection of 6666 Snakes slithering on the Ethereum Blockchain 🐍"
+  >
     <NavBar />
     <main className={styles.main}>
       <HeroSection />

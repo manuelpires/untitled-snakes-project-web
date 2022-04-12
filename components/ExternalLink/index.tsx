@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 
 type Props = {
   children?: ReactNode;
-  url: string;
+  url?: string;
 };
 
-const Link = ({ children, url }: Props) => (
+const ExternalLink = ({ children, url }: Props) => (
   <a href={url} target="_blank" rel="noopener noreferrer">
-    <span>{children}</span>
+    {children}
   </a>
 );
 
-export default Link;
+export default ExternalLink;

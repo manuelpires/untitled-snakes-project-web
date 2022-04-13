@@ -103,10 +103,10 @@ const MintPanel = () => {
   // Case 4: Sale is active and ongoing
   return (
     <div className={styles.container}>
-      <h2>
+      <h3>
         <span className={styles.colored}>{currentSupply}</span>
         {` / ${maxSupply} minted`}
-      </h2>
+      </h3>
       <div className={styles.buttonsContainer}>
         <Button isRound onClick={onLessAmountPress} disabled={isMinting}>
           <Image src={LessIcon} alt="less" width={40} height={40} />

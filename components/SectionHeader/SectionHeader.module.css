@@ -1,18 +1,14 @@
 .title {
-  font-size: 4rem;
   background: linear-gradient(340deg, #60c657 30%, #35a2e2 70%);
   background-clip: text;
   width: fit-content;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.title.main {
-  font-size: 8.5rem;
+  margin: 0;
 }
 
 @media (max-width: 767px) {
-  .title.main {
-    font-size: 5rem;
+  .title {
+    font-size: 3rem;
   }
 }

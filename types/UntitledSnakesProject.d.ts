@@ -358,7 +358,7 @@ export class UntitledSnakesProject extends BaseContract {
     isSaleActive(overrides?: CallOverrides): Promise<[boolean]>;
 
     mint(
-      _quantity: BigNumberish,
+      _amount: BigNumberish,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -492,7 +492,7 @@ export class UntitledSnakesProject extends BaseContract {
   isSaleActive(overrides?: CallOverrides): Promise<boolean>;
 
   mint(
-    _quantity: BigNumberish,
+    _amount: BigNumberish,
     overrides?: PayableOverrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -619,7 +619,7 @@ export class UntitledSnakesProject extends BaseContract {
 
     isSaleActive(overrides?: CallOverrides): Promise<boolean>;
 
-    mint(_quantity: BigNumberish, overrides?: CallOverrides): Promise<void>;
+    mint(_amount: BigNumberish, overrides?: CallOverrides): Promise<void>;
 
     name(overrides?: CallOverrides): Promise<string>;
 
@@ -818,7 +818,7 @@ export class UntitledSnakesProject extends BaseContract {
     isSaleActive(overrides?: CallOverrides): Promise<BigNumber>;
 
     mint(
-      _quantity: BigNumberish,
+      _amount: BigNumberish,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -956,7 +956,7 @@ export class UntitledSnakesProject extends BaseContract {
     isSaleActive(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     mint(
-      _quantity: BigNumberish,
+      _amount: BigNumberish,
       overrides?: PayableOverrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 

@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.supplyInfo {
+  font-size: 1.5rem;
+}
+
 .colored {
   color: #60c657;
 }

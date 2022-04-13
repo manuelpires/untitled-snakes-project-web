@@ -103,7 +103,7 @@ const MintPanel = () => {
   // Case 4: Sale is active and ongoing
   return (
     <div className={styles.container}>
-      <h3>
+      <h3 className={styles.supplyInfo}>
         <span className={styles.colored}>{currentSupply}</span>
         {` / ${maxSupply} minted`}
       </h3>

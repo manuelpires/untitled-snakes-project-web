@@ -1,16 +1,13 @@
-import Section from "../Section";
 import HeroImages from "../../components/HeroImages";
 import styles from "./HeroSection.module.css";
 
 const HeroSection = () => (
-  <Section
-    id="hero"
-    title="Untitled Snakes Project"
-    className={styles.hero}
-    isMainSection
-  >
+  <section className={styles.hero}>
+    <header className={styles.header}>
+      <h1 className={styles.title}>Untitled Snakes Project</h1>
+    </header>
     <HeroImages />
-  </Section>
+  </section>
 );
 
 export default HeroSection;

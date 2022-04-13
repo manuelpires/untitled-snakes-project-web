@@ -1,26 +1,16 @@
 import { ReactNode } from "react";
-import Title from "../../components/Title";
+import SectionHeader from "../../components/SectionHeader";
 import styles from "./Section.module.css";
 
 type Props = {
   id: string;
   title: string;
-  className?: string;
-  isMainSection?: boolean;
   children?: ReactNode;
 };
 
-const Section = ({
-  id,
-  title,
-  className = "",
-  isMainSection = false,
-  children,
-}: Props) => (
-  <section id={id} className={`${styles.section} ${className}`}>
-    <header>
-      <Title isMainTitle={isMainSection} text={title} />
-    </header>
+const Section = ({ id, title, children }: Props) => (
+  <section id={id} className={styles.section}>
+    <SectionHeader title={title} />
     {children}
   </section>
 );

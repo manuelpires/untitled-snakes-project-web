@@ -9,3 +9,9 @@
 .title.main {
   font-size: 8.5rem;
 }
+
+@media (max-width: 767px) {
+  .title.main {
+    font-size: 5rem;
+  }
+}

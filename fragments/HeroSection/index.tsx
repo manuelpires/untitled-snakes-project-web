@@ -1,14 +1,16 @@
-import Title from "../../components/Title";
+import Section from "../Section";
 import HeroImages from "../../components/HeroImages";
 import styles from "./HeroSection.module.css";
 
 const HeroSection = () => (
-  <section className={styles.container}>
-    <header className={styles.header}>
-      <Title isMainTitle text="Untitled Snakes Project" />
-    </header>
+  <Section
+    id="hero"
+    title="Untitled Snakes Project"
+    className={styles.hero}
+    isMainSection
+  >
     <HeroImages />
-  </section>
+  </Section>
 );
 
 export default HeroSection;

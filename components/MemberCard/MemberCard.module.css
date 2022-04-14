@@ -22,7 +22,7 @@
   color: #35a2e2;
 }
 
-.bio {
+.content .bio {
   white-space: pre-wrap;
   font-size: 1.25rem;
   line-height: 2rem;
@@ -38,7 +38,7 @@
     font-size: 1.25rem;
   }
 
-  .bio {
+  .content .bio {
     font-size: 1rem;
     line-height: 1.75rem;
   }

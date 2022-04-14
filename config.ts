@@ -13,6 +13,10 @@ export const navBarLinks = [
     label: "Mint",
   },
   {
+    href: "#species",
+    label: "Species",
+  },
+  {
     href: "#about",
     label: "About",
   },

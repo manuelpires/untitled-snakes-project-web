@@ -2,6 +2,7 @@ import Layout from "../fragments/Layout";
 import NavBar from "../fragments/NavBar";
 import HeroSection from "../fragments/HeroSection";
 import MintSection from "../fragments/MintSection";
+import SpeciesSection from "../fragments/SpeciesSection";
 import AboutSection from "../fragments/AboutSection";
 import TeamSection from "../fragments/TeamSection";
 import Separator from "../components/Separator";
@@ -17,6 +18,8 @@ const Home = () => (
       <HeroSection />
       <Separator />
       <MintSection />
+      <Separator />
+      <SpeciesSection />
       <Separator />
       <AboutSection />
       <Separator />

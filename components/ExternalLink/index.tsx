@@ -6,7 +6,12 @@ type Props = {
 };
 
 const ExternalLink = ({ children, url }: Props) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ display: "flex" }}
+  >
     {children}
   </a>
 );

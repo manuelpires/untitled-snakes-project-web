@@ -9,7 +9,7 @@ const TeamSection = () => (
       <MemberCard
         name="Shaka"
         bio={"Code + Pixels.\nCreator of Snakes.\nNot good at naming projects."}
-        twitterLink="https://twitter.com/shakazaitsev"
+        twitterLink="https://twitter.com/ShakaZaitsev"
         image={shakaImage}
       />
     </div>

@@ -29,9 +29,14 @@ const Web3Connect = ({ children, isSmall = false }: Props) => {
 
   useEffect(() => {
     if (error) {
-      toast.error(`"Find ussss on Kovan." 🐍`, {
-        toastId: "wrong-network",
-      });
+      toast.error(
+        `"Find ussss on ${
+          Number(process.env.NEXT_PUBLIC_CHAIN_ID) === 1 ? "Mainnet" : "Kovan"
+        }." 🐍`,
+        {
+          toastId: "wrong-network",
+        }
+      );
     }
   }, [error]);
 

@@ -5,7 +5,7 @@ type Props = {
 };
 
 const SectionHeader = ({ title }: Props) => (
-  <header>
+  <header className={styles.header}>
     <h2 className={styles.title}>{title}</h2>
   </header>
 );

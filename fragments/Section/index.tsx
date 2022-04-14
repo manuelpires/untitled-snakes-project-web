@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Section = ({ id, title, children }: Props) => (
-  <section id={id} className={styles.section}>
+  <section id={id} className={styles.container}>
     <SectionHeader title={title} />
     {children}
   </section>

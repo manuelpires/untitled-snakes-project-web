@@ -19,6 +19,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
+  padding-left: 2rem;
 }
 
 @media (max-width: 1279px) {

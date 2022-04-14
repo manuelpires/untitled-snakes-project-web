@@ -19,7 +19,9 @@ const MemberCard = ({ name, bio, twitterLink, image }: Props) => (
         <ExternalLink url={twitterLink}>
           <Image src={TwitterLogo} alt={`${name} Twitter`} layout="fixed" />
         </ExternalLink>
-        <h3 className={styles.name}>{name}</h3>
+        <ExternalLink url={twitterLink}>
+          <h3 className={styles.name}>{name}</h3>
+        </ExternalLink>
       </div>
       <p className={styles.bio}>{bio}</p>
     </div>

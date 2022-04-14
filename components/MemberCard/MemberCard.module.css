@@ -15,6 +15,11 @@
   margin: 0;
   font-size: 1.5rem;
   color: #60c657;
+  transition-duration: .2s;
+}
+
+.name:hover {
+  color: #35a2e2;
 }
 
 .bio {

@@ -1,0 +1,40 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #60c657;
+}
+
+.bio {
+  white-space: pre-wrap;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 425px) {
+  .content {
+    gap: 1rem;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}

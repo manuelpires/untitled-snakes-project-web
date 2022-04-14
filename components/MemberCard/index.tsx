@@ -1,0 +1,29 @@
+import Image, { StaticImageData } from "next/image";
+import TwitterLogo from "../../public/icons/twitter-logo.svg";
+import Card from "../../components/Card";
+import ExternalLink from "../../components/ExternalLink";
+import styles from "./MemberCard.module.css";
+
+type Props = {
+  name: string;
+  bio: string;
+  twitterLink: string;
+  image: StaticImageData;
+};
+
+const MemberCard = ({ name, bio, twitterLink, image }: Props) => (
+  <Card>
+    <div className={styles.content}>
+      <Image src={image} alt={name} layout="responsive" />
+      <div className={styles.header}>
+        <ExternalLink url={twitterLink}>
+          <Image src={TwitterLogo} alt={`${name} Twitter`} layout="fixed" />
+        </ExternalLink>
+        <h3 className={styles.name}>{name}</h3>
+      </div>
+      <p className={styles.bio}>{bio}</p>
+    </div>
+  </Card>
+);
+
+export default MemberCard;

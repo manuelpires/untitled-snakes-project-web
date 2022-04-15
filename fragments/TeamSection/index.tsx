@@ -8,7 +8,7 @@ const TeamSection = () => (
     <div className={styles.container}>
       <MemberCard
         name="Shaka"
-        bio={"Code + Pixels.\nCreator of Snakes.\nNot good at naming projects."}
+        bio={"Code + Pixels.\nMaker of snakes.\nNot good at naming projects."}
         twitterLink="https://twitter.com/ShakaZaitsev"
         image={shakaImage}
       />

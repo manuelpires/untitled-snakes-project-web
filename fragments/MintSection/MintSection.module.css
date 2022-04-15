@@ -1,3 +1,30 @@
+.container {
+  display: flex;
+  gap: 4rem;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 350px;
+}
+
+.imageContainer img {
+  border-radius: 20px;
+}
+
+.mintContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .colored {
   color: #60c657;
+}
+
+@media (max-width: 1279px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  } 
 }

@@ -87,7 +87,7 @@ const MintPanel = () => {
   if (isSoldOut) {
     return (
       <div className={styles.container}>
-        <h2>SOLD OUT 💥</h2>
+        <h3 className={styles.colored}>SOLD OUT!</h3>
         <ExternalLink url="https://opensea.io/collection/snakesproject">
           <Button>{`Buy on OpenSea 🐍`}</Button>
         </ExternalLink>

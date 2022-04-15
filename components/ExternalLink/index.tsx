@@ -10,7 +10,7 @@ const ExternalLink = ({ children, url }: Props) => (
     href={url}
     target="_blank"
     rel="noopener noreferrer"
-    style={{ display: "flex" }}
+    style={{ display: "inline-flex" }}
   >
     {children}
   </a>

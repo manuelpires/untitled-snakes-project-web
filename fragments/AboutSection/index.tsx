@@ -14,9 +14,12 @@ const AboutSection = () => (
       <ExternalLink url="https://www.proofofhumanity.id/">
         <span className={styles.colored}>Proof Of Humanity</span>
       </ExternalLink>
-      &apos;s cause and their ERC-20 token UBI, which is being dripped to every
-      verified human on Earth as an universal basic income. Please check out
-      their project if you haven&apos;t already!
+      &apos;s cause and their ERC-20 token{" "}
+      <ExternalLink url="https://blog.kleros.io/introducing-ubi-universal-basic-income-for-humans/">
+        <span className={styles.colored}>UBI</span>
+      </ExternalLink>
+      , which is being dripped to every verified human on Earth as an universal
+      basic income. Please check out their project if you haven&apos;t already!
     </p>
     <p>
       To help with the burning of UBI tokens, 100% of the minting profits gotten

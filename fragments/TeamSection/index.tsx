@@ -7,7 +7,7 @@ const TeamSection = () => (
   <Section id="team" title="Team">
     <div className={styles.container}>
       <MemberCard
-        name="Shaka"
+        name="0xShaka"
         bio={"Code + Pixels.\nMaker of snakes.\nNot good at naming projects."}
         twitterLink="https://twitter.com/0xShaka"
         image={shakaImage}

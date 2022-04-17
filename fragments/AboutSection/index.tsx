@@ -19,9 +19,8 @@ const AboutSection = () => (
       their project if you haven&apos;t already!
     </p>
     <p>
-      In order to support the burn of UBI tokens, 100% of the minting profits
-      gotten from addresses registered on Proof Of Humanity are transfered to
-      the{" "}
+      To help with the burning of UBI tokens, 100% of the minting profits gotten
+      from addresses registered on Proof Of Humanity are transfered to the{" "}
       <ExternalLink url="https://ubiburner.com/">
         <span className={styles.colored}>UBI Burner</span>
       </ExternalLink>{" "}

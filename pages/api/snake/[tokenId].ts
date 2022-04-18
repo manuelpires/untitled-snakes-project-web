@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import middleware from "../../../middleware";
+import middleware from "middleware";
 
 // GET /api/snake/:tokenId
 const handler = async (

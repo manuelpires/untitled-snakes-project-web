@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { NextApiRequest, NextApiResponse } from "next";
-import CONTRACT from "../contracts/UntitledSnakesProject.json";
+import CONTRACT from "contracts/UntitledSnakesProject.json";
 
 const infuraProvider = new ethers.providers.InfuraProvider(
   Number(process.env.NEXT_PUBLIC_CHAIN_ID),

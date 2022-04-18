@@ -1,6 +1,6 @@
-import shakaImage from "../../public/images/snake-4.png";
-import Section from "../Section";
-import { MemberCard } from "../../components";
+import shakaImage from "public/images/snake-4.png";
+import { Section } from "fragments";
+import { MemberCard } from "components";
 import styles from "./TeamSection.module.css";
 
 const TeamSection = () => (

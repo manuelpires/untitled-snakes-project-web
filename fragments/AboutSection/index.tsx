@@ -1,5 +1,5 @@
-import Section from "../Section";
-import { ExternalLink } from "../../components";
+import { Section } from "fragments";
+import { ExternalLink } from "components";
 import styles from "./AboutSection.module.css";
 
 const AboutSection = () => (

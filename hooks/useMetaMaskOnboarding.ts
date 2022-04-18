@@ -1,6 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import detectEthereumProvider from "@metamask/detect-provider";
 import type MetaMaskOnboarding from "@metamask/onboarding";
-import { useEffect, useRef, useState } from "react";
 
 export default function useMetaMaskOnboarding() {
   const onboarding = useRef<MetaMaskOnboarding>();

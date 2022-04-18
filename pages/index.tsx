@@ -6,9 +6,9 @@ import {
   NavBar,
   SpeciesSection,
   TeamSection,
-} from "../fragments";
-import { Separator } from "../components";
-import styles from "../styles/Home.module.css";
+} from "fragments";
+import { Separator } from "components";
+import styles from "styles/Home.module.css";
 
 const Home = () => (
   <Layout

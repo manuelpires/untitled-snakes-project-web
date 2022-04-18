@@ -1,8 +1,8 @@
 import { useState, useCallback, useEffect } from "react";
 import { BigNumber } from "ethers";
-import useContract from "./useContract";
-import type { UntitledSnakesProject } from "../types";
-import CONTRACT from "../contracts/UntitledSnakesProject.json";
+import { useContract } from "hooks";
+import CONTRACT from "contracts/UntitledSnakesProject.json";
+import type { UntitledSnakesProject } from "types";
 
 const useSnakesContract = () => {
   const contract = useContract<UntitledSnakesProject>(

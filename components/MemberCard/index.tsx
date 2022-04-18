@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
-import TwitterLogo from "../../public/icons/twitter-logo.svg";
-import { Card, ExternalLink } from "../../components";
+import TwitterLogo from "public/icons/twitter-logo.svg";
+import { Card, ExternalLink } from "components";
 import styles from "./MemberCard.module.css";
 
 type Props = {

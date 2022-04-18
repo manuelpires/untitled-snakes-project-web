@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
-import { injected } from "../connectors";
+import { injected } from "connectors";
 
 const useEagerConnect = () => {
   const { activate, active, setError } = useWeb3React();

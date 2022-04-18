@@ -1,8 +1,8 @@
 import Image from "next/image";
-import snk1 from "../../public/images/snake-1.png";
-import snk2 from "../../public/images/snake-2.png";
-import snk3 from "../../public/images/snake-3.png";
-import snk4 from "../../public/images/snake-4.png";
+import snk1 from "public/images/snake-1.png";
+import snk2 from "public/images/snake-2.png";
+import snk3 from "public/images/snake-3.png";
+import snk4 from "public/images/snake-4.png";
 import styles from "./HeroImages.module.css";
 
 const HeroImages = () => {

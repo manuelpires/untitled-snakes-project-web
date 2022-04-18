@@ -1,13 +1,8 @@
 import { useMemo } from "react";
 import { useWeb3React } from "@web3-react/core";
-import {
-  shortenHex,
-  formatEtherscanLink,
-  EtherscanLinkType,
-} from "../../utils";
-import { useENSName } from "../../hooks";
-import ExternalLink from "../ExternalLink";
-import Button from "../Button";
+import { shortenHex, formatEtherscanLink, EtherscanLinkType } from "utils";
+import { useENSName } from "hooks";
+import { Button, ExternalLink } from "components";
 
 const AccountLink = () => {
   const { account, chainId } = useWeb3React();

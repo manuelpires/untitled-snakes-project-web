@@ -3,7 +3,7 @@ import {
   ExternalLinksGroup,
   NavBarLinksGroup,
   Web3Connect,
-} from "../../components";
+} from "components";
 import styles from "./NavBar.module.css";
 
 const NavBar = () => (

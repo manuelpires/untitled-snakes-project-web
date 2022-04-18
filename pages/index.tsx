@@ -1,11 +1,13 @@
-import Layout from "../fragments/Layout";
-import NavBar from "../fragments/NavBar";
-import HeroSection from "../fragments/HeroSection";
-import MintSection from "../fragments/MintSection";
-import SpeciesSection from "../fragments/SpeciesSection";
-import AboutSection from "../fragments/AboutSection";
-import TeamSection from "../fragments/TeamSection";
-import Separator from "../components/Separator";
+import {
+  AboutSection,
+  HeroSection,
+  Layout,
+  MintSection,
+  NavBar,
+  SpeciesSection,
+  TeamSection,
+} from "../fragments";
+import { Separator } from "../components";
 import styles from "../styles/Home.module.css";
 
 const Home = () => (

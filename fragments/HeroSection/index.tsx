@@ -1,4 +1,4 @@
-import HeroImages from "../../components/HeroImages";
+import { HeroImages } from "../../components";
 import styles from "./HeroSection.module.css";
 
 const HeroSection = () => (

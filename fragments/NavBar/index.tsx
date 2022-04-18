@@ -1,7 +1,9 @@
-import NavBarLinksGroup from "../../components/NavBarLinksGroup";
-import ExternalLinksGroup from "../../components/ExternalLinksGroup";
-import Web3Connect from "../../components/Web3Connect";
-import AccountLink from "../../components/AccountLink";
+import {
+  AccountLink,
+  ExternalLinksGroup,
+  NavBarLinksGroup,
+  Web3Connect,
+} from "../../components";
 import styles from "./NavBar.module.css";
 
 const NavBar = () => (

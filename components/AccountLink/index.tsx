@@ -5,7 +5,7 @@ import {
   formatEtherscanLink,
   EtherscanLinkType,
 } from "../../utils";
-import useENSName from "../../hooks/useENSName";
+import { useENSName } from "../../hooks";
 import ExternalLink from "../ExternalLink";
 import Button from "../Button";
 

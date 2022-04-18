@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import mintImage from "../../public/images/snake-1.png";
 import Section from "../Section";
-import Web3Connect from "../../components/Web3Connect";
-import MintPanel from "../../components/MintPanel";
+import { MintPanel, Web3Connect } from "../../components";
 import styles from "./MintSection.module.css";
 
 const MintSection = () => (

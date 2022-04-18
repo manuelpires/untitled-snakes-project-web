@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import SectionHeader from "../../components/SectionHeader";
+import { SectionHeader } from "../../components";
 import styles from "./Section.module.css";
 
 type Props = {

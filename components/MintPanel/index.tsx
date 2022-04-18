@@ -4,7 +4,7 @@ import { utils } from "ethers";
 import { toast } from "react-toastify";
 import LessIcon from "../../public/icons/less-icon.svg";
 import MoreIcon from "../../public/icons/more-icon.svg";
-import useSnakesContract from "../../hooks/useSnakesContract";
+import { useSnakesContract } from "../../hooks";
 import Button from "../Button";
 import ExternalLink from "../ExternalLink";
 import styles from "./MintPanel.module.css";

@@ -16,7 +16,7 @@ const MintPanel = () => {
   const {
     contract,
     currentSupply,
-    isLoading,
+    isContractStateLoading,
     isSaleActive,
     isSoldOut,
     maxSupply,
@@ -79,7 +79,7 @@ const MintPanel = () => {
   };
 
   // Case 1: Contract state is loading
-  if (isLoading) {
+  if (isContractStateLoading) {
     return null;
   }
 

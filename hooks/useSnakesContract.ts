@@ -10,20 +10,16 @@ const useSnakesContract = () => {
     CONTRACT.abi
   );
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isContractStateLoading, setIsContractStateLoading] = useState(true);
   const [isSoldOut, setIsSoldOut] = useState(false);
 
   // CONTRACT CONSTANTS
-  const [maxSupply, setMaxSupply] = useState<number>();
-  const [maxMintPerTx, setMaxMintPerTx] = useState<number>();
+  const maxSupply = 6666;
+  const maxMintPerTx = 10;
   const [price, setPrice] = useState<BigNumber>();
 
-  const getContractConstants = useCallback(async () => {
+  const getPrice = useCallback(async () => {
     if (contract) {
-      const contractMaxSupply = await contract.MAX_SUPPLY();
-      setMaxSupply(contractMaxSupply.toNumber());
-      const contractMaxMintPerTx = await contract.MAX_MINT_PER_TX();
-      setMaxMintPerTx(contractMaxMintPerTx.toNumber());
       const contractPrice = await contract.price();
       setPrice(contractPrice);
     }
@@ -45,10 +41,10 @@ const useSnakesContract = () => {
 
   // FIRST LOAD
   const runFirstLoad = useCallback(async () => {
-    await getContractConstants();
+    await getPrice();
     await getContractVariables();
-    setIsLoading(false);
-  }, [getContractConstants, getContractVariables]);
+    setIsContractStateLoading(false);
+  }, [getPrice, getContractVariables]);
 
   useEffect(() => {
     runFirstLoad();
@@ -65,13 +61,12 @@ const useSnakesContract = () => {
   return {
     contract,
     currentSupply,
-    isLoading,
+    isContractStateLoading,
     isSaleActive,
     isSoldOut,
     maxSupply,
     maxMintPerTx,
     price,
-    getContractConstants,
     getContractVariables,
   };
 };

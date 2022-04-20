@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { SectionHeader } from "components";
 import styles from "./Section.module.css";
 
-type Props = {
+interface Props {
   id: string;
   title: string;
   children?: ReactNode;

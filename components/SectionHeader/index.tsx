@@ -1,6 +1,6 @@
 import styles from "./SectionHeader.module.css";
 
-type Props = {
+interface Props {
   title: string;
 };
 

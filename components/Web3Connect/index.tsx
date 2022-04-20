@@ -6,7 +6,7 @@ import { injected } from "connectors";
 import { useEagerConnect, useMetaMaskOnboarding } from "hooks";
 import { Button } from "components";
 
-type Props = {
+interface Props {
   children?: ReactNode;
   isSmall?: boolean;
 };

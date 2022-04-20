@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Head from "next/head";
 import { Footer } from "components";
 
-type Props = {
+interface Props {
   children?: ReactNode;
   title: string;
   description: string;

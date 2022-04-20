@@ -3,7 +3,7 @@ import TwitterLogo from "public/icons/twitter-logo.svg";
 import { Card, ExternalLink } from "components";
 import styles from "./MemberCard.module.css";
 
-type Props = {
+interface Props {
   name: string;
   bio: string;
   twitterLink: string;

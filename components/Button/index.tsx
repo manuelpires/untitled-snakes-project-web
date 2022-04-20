@@ -4,7 +4,7 @@ import styles from "./Button.module.css";
 
 const cx = classNames.bind(styles);
 
-type Props = {
+interface Props {
   children?: ReactNode;
   disabled?: boolean;
   isSmall?: boolean;

@@ -26,13 +26,13 @@
 
 @media (max-width: 767px) {
   .container {
-    grid-template-columns: 134px 134px;
-    grid-template-rows: 134px 134px;
+    grid-template-columns: 147px 147px;
+    grid-template-rows: 147px 147px;
     gap: 16px;
   }
 
   .imageContainer {
-    max-width: 134px;
+    max-width: 147px;
   }
 
   .imageContainer img {

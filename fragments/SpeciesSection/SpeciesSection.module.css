@@ -25,10 +25,6 @@
 }
 
 @media (max-width: 767px) {
-  .imageContainer {
-    max-width: 311px;
-  }
-
   .imageContainer img {
     border-radius: 8px;
   }

@@ -9,7 +9,13 @@ const MintSection = () => (
   <Section id="mint" title="Mint">
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image src={mintImage} alt="Mint" layout="responsive" />
+        <Image
+          src={mintImage}
+          alt="Mint"
+          width={350}
+          height={350}
+          layout="responsive"
+        />
       </div>
       <div>
         <p>

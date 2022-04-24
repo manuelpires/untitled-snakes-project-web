@@ -10,7 +10,14 @@ const HeroImages = () => {
     <div className={styles.container}>
       {[snk1, snk2, snk3, snk4].map((image, index) => (
         <div key={index} className={styles.imageContainer}>
-          <Image src={image} alt="Snake" layout="responsive" priority />
+          <Image
+            src={image}
+            alt="Snake"
+            width={236}
+            height={236}
+            layout="responsive"
+            priority
+          />
         </div>
       ))}
     </div>

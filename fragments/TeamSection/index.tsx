@@ -1,4 +1,4 @@
-import shakaImage from "public/images/snake-4.png";
+import shakaImage from "public/images/0xShaka.png";
 import { Section } from "fragments";
 import { MemberCard } from "components";
 import styles from "./TeamSection.module.css";

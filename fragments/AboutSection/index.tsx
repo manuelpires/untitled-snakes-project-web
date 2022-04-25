@@ -5,7 +5,7 @@ import styles from "./AboutSection.module.css";
 const AboutSection = () => (
   <Section id="about" title="About">
     <p>
-      Untitled Snakes Project is an NFT collection of 6666 randomly generated
+      Untitled Snakes Project is an NFT collection of 6,666 randomly generated
       snakes slithering on the Ethereum blockchain. The project was created out
       of pure fun and to mock my own fear of snakes.
     </p>

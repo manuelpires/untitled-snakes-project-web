@@ -104,7 +104,7 @@ const MintPanel = () => {
     <div className={styles.container}>
       <h3 className={styles.supplyInfo}>
         <span className={styles.colored}>{currentSupply}</span>
-        {` / ${maxSupply} minted`}
+        {` / ${maxSupply.toLocaleString()} minted`}
       </h3>
       <div className={styles.buttonsContainer}>
         <Button isRound onClick={onLessAmountPress} disabled={isMinting}>

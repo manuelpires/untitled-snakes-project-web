@@ -24,7 +24,7 @@ const getMintTxHash = async (tokenId: string) => {
 
   const [mintTransfer] = await contract.queryFilter(
     eventFilter,
-    process.env.NEXT_PUBLIC_DEPLOYMENT_BLOCK_NUMBER
+    Number(process.env.NEXT_PUBLIC_DEPLOYMENT_BLOCK_NUMBER)
   );
 
   return mintTransfer?.transactionHash;

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { externalLinks } from "config";
 import { ExternalLink } from "components";
+import { externalLinks } from "links";
 import styles from "./ExternalLinksGroup.module.css";
 
 const ExternalLinksGroup = () => (

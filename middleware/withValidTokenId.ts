@@ -22,7 +22,10 @@ const getMintTxHash = async (tokenId: string) => {
     ethers.BigNumber.from(tokenId)
   );
 
-  const [mintTransfer] = await contract.queryFilter(eventFilter, 30979080);
+  const [mintTransfer] = await contract.queryFilter(
+    eventFilter,
+    process.env.NEXT_PUBLIC_DEPLOYMENT_BLOCK_NUMBER
+  );
 
   return mintTransfer?.transactionHash;
 };

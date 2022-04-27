@@ -11,6 +11,7 @@ const handler = async (
 ) => {
   const { tokenId } = req.query;
 
+  // Fetch image from the IPFS gateway
   const response = await fetch(
     `${process.env.IPFS_IMAGES_BASE_URI}${tokenId}.png`
   );

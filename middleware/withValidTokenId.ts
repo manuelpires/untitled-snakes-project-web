@@ -16,12 +16,14 @@ const isTokenIdValid = (tokenId: string) => {
  * If the tokenId has not been minted yet, returns undefined.
  */
 const getMintTxHash = async (tokenId: string) => {
+  // Filter for Transfer events of the given tokenId from AddressZero
   const eventFilter = contract.filters.Transfer(
     ethers.constants.AddressZero,
     null,
     ethers.BigNumber.from(tokenId)
   );
 
+  // Query for the mint transaction using the filter
   const [mintTransfer] = await contract.queryFilter(
     eventFilter,
     Number(process.env.NEXT_PUBLIC_DEPLOYMENT_BLOCK_NUMBER)

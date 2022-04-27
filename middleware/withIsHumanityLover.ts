@@ -17,10 +17,12 @@ function withIsHumanityLover(
     req: NextApiRequestWithTokenData,
     res: NextApiResponse
   ) {
+    // Get event logs from the mint transaction
     const { logs } = await provider.getTransactionReceipt(
       req.tokenData.mintTxHash
     );
 
+    // Verify if there's a HumanityLover event in the logs
     req.tokenData.isHumanityLover = logs.some(
       (log) =>
         log.topics[0] ===

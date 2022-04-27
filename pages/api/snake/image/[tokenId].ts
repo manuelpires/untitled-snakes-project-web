@@ -16,11 +16,9 @@ const handler = async (
   );
   const arrayBuffer = await response.arrayBuffer();
 
-  res
-    .setHeader("Content-Type", "image/png")
-    .setHeader("Cache-Control", "max-age=0, s-maxage=31536000")
-    .status(200)
-    .end(Buffer.from(arrayBuffer));
+  res.setHeader("Content-Type", "image/png");
+  res.setHeader("Cache-Control", "max-age=0, s-maxage=31536000");
+  res.status(200).end(Buffer.from(arrayBuffer));
 };
 
 export default withErrorWrapper(withGetMethod(withValidTokenId(handler)));

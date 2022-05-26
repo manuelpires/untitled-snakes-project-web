@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import Section from "./Section";
 import SpeciesSection from "./SpeciesSection";
 import TeamSection from "./TeamSection";
+import FaqSection from "./FaqSection";
 
 export {
   AboutSection,
@@ -16,4 +17,5 @@ export {
   Section,
   SpeciesSection,
   TeamSection,
+  FaqSection,
 };

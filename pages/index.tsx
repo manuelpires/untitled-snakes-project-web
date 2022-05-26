@@ -6,6 +6,7 @@ import {
   NavBar,
   SpeciesSection,
   TeamSection,
+  FaqSection,
 } from "fragments";
 import { Separator } from "components";
 import styles from "styles/Home.module.css";
@@ -26,6 +27,8 @@ const Home = () => (
       <AboutSection />
       <Separator />
       <TeamSection />
+      <Separator />
+      <FaqSection />
     </main>
   </Layout>
 );

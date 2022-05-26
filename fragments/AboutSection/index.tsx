@@ -7,7 +7,7 @@ const AboutSection = () => (
     <p>
       Untitled Snakes Project is an NFT collection of 6,666 randomly generated
       snakes slithering on the Ethereum blockchain. The project was created out
-      of pure fun and to mock my own fear of snakes.
+      of pure fun and to mock my own fear of snakes. 💀
     </p>
     <p>
       The team fully supports{" "}
@@ -27,13 +27,14 @@ const AboutSection = () => (
       <ExternalLink url="https://ubiburner.com/">
         <span className={styles.colored}>UBI Burner</span>
       </ExternalLink>{" "}
-      pool in a trustless way. The UBI Burner will then use this Ether from the
-      pool to buy and burn UBI, helping all of humanity in the process.
+      pool in a trustless way, using a mechanism coded at smart contract level.
+      The UBI Burner will then use this Ether from its pool to buy and burn UBI,
+      helping all of humanity in the process.
     </p>
     <p>
       The main goal of Untitled Snakes Project is to add one more incentive for
       the community to burn UBI tokens, and to get Proof Of Humanity to more
-      people.
+      people. 🙌
     </p>
   </Section>
 );

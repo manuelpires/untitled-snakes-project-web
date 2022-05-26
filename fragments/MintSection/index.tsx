@@ -25,7 +25,7 @@ const MintSection = () => (
         <p>
           If you are registered on Proof Of Humanity, you can mint using your
           registered address to donate 100% of your Ether spent for burning UBI
-          tokens. Read more at the{" "}
+          tokens. Please read more at the{" "}
           <Link href="#about" passHref>
             <a className={styles.colored}>About</a>
           </Link>{" "}

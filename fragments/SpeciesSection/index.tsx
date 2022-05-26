@@ -11,12 +11,12 @@ const SpeciesSection = () => (
       </div>
       <div className={styles.textContainer}>
         <p>
-          Among the many special traits the snakes have, the most important one
-          is their specie.
+          Among the many special traits the snakes have, the most important (and
+          fun!) one is their specie.
         </p>
         <p>
           There are seven different species of snakes: four commons, two rares
-          and one super-rare. Here are their actual rarities:
+          and one ultra-rare. Here are their actual rarities:
         </p>
         <ul>
           <li>🌱 Earth (~25.6%)</li>

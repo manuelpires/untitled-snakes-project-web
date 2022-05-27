@@ -69,8 +69,8 @@ const FaqSection = () => (
         </b>
         <p>
           There&apos;s a SHA-256 hash available for the image of each one of the
-          snakes NFTs. For instance, if you want to get the hash for the image
-          of the NFT #666, you can find it here:
+          snakes NFTs. For instance, if you want to get the hash for the NFT
+          #666, you can find it here:
         </p>
         <ExternalLink url="https://snakesproject.infura-ipfs.io/ipfs/QmWEwMFUHoEtyyCMnrDvUraSAT5QFsKRdgBBu4LG1SQLY7/666">
           <span className={styles.link}>
@@ -78,14 +78,14 @@ const FaqSection = () => (
           </span>
         </ExternalLink>
         <p>
-          If you want to get the hash of a different snake NFT, you just have to
+          If you want to get the hash of a different snake, you just have to
           replace the number after the last slash bar with the ID of the target
           NFT. This way, there&apos;s full guarantee that the NFTs images and
           their order in the collection were fully set pre-mint.
         </p>
         <p>
-          There&apos;s also this provenance hash for the whole collection stored
-          in the contract:{" "}
+          Here&apos;s also the provenance hash of the collection which is stored
+          in the smart contract:{" "}
           <span className={styles.hash}>
             1c50eb3010dc8e6047f1c0e448040c38aa510ce847bdb66ae2c9d87521ae6db6
           </span>

@@ -33,8 +33,8 @@ const AboutSection = () => (
     </p>
     <p>
       The main goal of Untitled Snakes Project is to add one more incentive for
-      the community to burn UBI tokens, and to get Proof Of Humanity to more
-      people. 🙌
+      the community to burn UBI tokens, and to spread the word about Proof Of
+      Humanity. 🙌
     </p>
   </Section>
 );

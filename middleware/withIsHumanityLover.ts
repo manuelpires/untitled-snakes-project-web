@@ -1,6 +1,6 @@
 import { NextApiResponse } from "next";
 import type { NextApiRequestWithTokenData } from "types";
-import { provider } from "./connection";
+import { contract, provider } from "./connection";
 
 /*
  * withIsHumanityLover middleware.
@@ -25,8 +25,8 @@ function withIsHumanityLover(
     // Verify if there's a HumanityLover event in the logs
     req.tokenData.isHumanityLover = logs.some(
       (log) =>
-        log.topics[0] ===
-        "0x74dd375537dbb0a3fd231ee9f29143c9935dfa895779ca83b21a3c47bbba4d95"
+        contract.interface.parseLog(log).signature ===
+        "HumanityLover(address,uint256[])"
     );
 
     return handler(req, res);

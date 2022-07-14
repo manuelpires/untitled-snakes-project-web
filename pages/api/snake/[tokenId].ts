@@ -31,7 +31,7 @@ const handler = async (
   }
 
   res.setHeader("Content-Type", "application/json");
-  res.setHeader("Cache-Control", "max-age=0, s-maxage=31536000");
+  res.setHeader("Cache-Control", "s-maxage=2678400");
   res.status(200).json(json);
 };
 

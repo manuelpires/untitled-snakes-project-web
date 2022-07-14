@@ -18,7 +18,7 @@ const handler = async (
   const arrayBuffer = await response.arrayBuffer();
 
   res.setHeader("Content-Type", "image/png");
-  res.setHeader("Cache-Control", "max-age=0, s-maxage=31536000");
+  res.setHeader("Cache-Control", "s-maxage=2678400");
   res.status(200).end(Buffer.from(arrayBuffer));
 };
 

@@ -6,4 +6,9 @@
 
 .container > a {
   display: flex;
+  transition-duration: .2s;
+}
+
+.container > a:hover {
+  filter: drop-shadow(0 4px 4px rgba(255, 255, 255, .5));
 }

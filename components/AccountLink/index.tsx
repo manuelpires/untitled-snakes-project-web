@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useWeb3React } from "@web3-react/core";
-import { shortenHex, formatEtherscanLink, EtherscanLinkType } from "utils";
+import { shortenHex, formatEtherscanLink, EtherscanLinkType } from "utils/etherscan";
 import { useENSName } from "hooks";
 import { Button, ExternalLink } from "components";
 

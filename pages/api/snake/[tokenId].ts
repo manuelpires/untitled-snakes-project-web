@@ -1,5 +1,5 @@
 import { NextApiResponse } from "next";
-import type { NextApiRequestWithTokenData } from "types";
+import type { NextApiRequestWithTokenData, Metadata } from "types";
 import {
   withErrorWrapper,
   withGetMethod,
@@ -12,7 +12,7 @@ import {
  */
 const handler = async (
   req: NextApiRequestWithTokenData,
-  res: NextApiResponse
+  res: NextApiResponse<Metadata>
 ) => {
   const { tokenId } = req.query;
 
@@ -20,7 +20,7 @@ const handler = async (
   const response = await fetch(
     `${process.env.IPFS_METADATA_BASE_URI}${tokenId}`
   );
-  const json = await response.json();
+  const json = (await response.json()) as Metadata;
 
   // Update image url with the proxy url so we don't leak the IPFS CID
   json.image = `${process.env.NEXT_PUBLIC_IMAGES_BASE_URI}${tokenId}`;

@@ -4,7 +4,7 @@ import type { NextApiRequestWithTokenData } from "types";
 /*
  * withGetMethod middleware.
  * Verifies that the request is a GET.
- * Returns 404 if it's not a GET request.
+ * Returns 405 if it's not a GET request.
  */
 function withGetMethod(
   handler: (
@@ -19,7 +19,7 @@ function withGetMethod(
     if (req.method === "GET") {
       return handler(req, res);
     }
-    res.status(404).end();
+    res.status(405).end("Method Not Allowed");
   };
 }
 

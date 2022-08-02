@@ -7,7 +7,7 @@ import { withErrorWrapper, withGetMethod, withValidTokenId } from "middleware";
  */
 const handler = async (
   req: NextApiRequestWithTokenData,
-  res: NextApiResponse
+  res: NextApiResponse<Buffer>
 ) => {
   const { tokenId } = req.query;
 

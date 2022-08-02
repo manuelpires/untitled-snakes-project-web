@@ -1,4 +1,4 @@
-import { formatEtherscanLink, EtherscanLinkType } from "utils";
+import { formatEtherscanLink, EtherscanLinkType } from "./etherscan";
 import OpenSeaLogo from "public/icons/opensea-logo.svg";
 import EtherscanLogo from "public/icons/etherscan-logo.svg";
 import TwitterLogo from "public/icons/twitter-logo.svg";

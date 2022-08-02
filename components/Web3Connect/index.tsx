@@ -2,7 +2,7 @@ import { ReactNode, useState, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { UserRejectedRequestError } from "@web3-react/injected-connector";
 import { toast } from "react-toastify";
-import { injected } from "connectors";
+import { injected } from "utils/connectors";
 import { useEagerConnect, useMetaMaskOnboarding } from "hooks";
 import { Button } from "components";
 

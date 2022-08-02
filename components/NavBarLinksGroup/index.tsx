@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navBarLinks } from "links";
+import { navBarLinks } from "utils/links";
 import styles from "./NavBarLinksGroup.module.css";
 
 const NavBarLinksGroup = () => (

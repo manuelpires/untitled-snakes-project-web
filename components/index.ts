@@ -8,6 +8,7 @@ import HeroImages from "./HeroImages";
 import MemberCard from "./MemberCard";
 import MintPanel from "./MintPanel";
 import NavBarLinksGroup from "./NavBarLinksGroup";
+import PendingNotification from "./PendingNotification";
 import SectionHeader from "./SectionHeader";
 import Separator from "./Separator";
 import Web3Connect from "./Web3Connect";
@@ -23,6 +24,7 @@ export {
   MemberCard,
   MintPanel,
   NavBarLinksGroup,
+  PendingNotification,
   SectionHeader,
   Separator,
   Web3Connect,

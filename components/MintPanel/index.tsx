@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import LessIcon from "public/icons/less-icon.svg";
 import MoreIcon from "public/icons/more-icon.svg";
 import { useSnakesContract } from "hooks";
-import { Button, ExternalLink } from "components";
+import { Button, ExternalLink, PendingNotification } from "components";
 import styles from "./MintPanel.module.css";
 
 const MintPanel = () => {
@@ -44,8 +44,10 @@ const MintPanel = () => {
         });
         setIsMinting(true);
         toast.promise(tx.wait(), {
-          pending: "Pending transaction...",
-          success: `"Greetingsss, massster." 🐍`,
+          pending: {
+            render: <PendingNotification txHash={tx.hash} />,
+          },
+          success: `"Greetingsss, massster!" 🐍`,
           error: "Transaction failed 💀",
         });
         await tx.wait();
@@ -86,7 +88,7 @@ const MintPanel = () => {
   if (isSoldOut) {
     return (
       <div className={styles.container}>
-        <h3 className={styles.colored}>SOLD OUT!</h3>
+        <h3 className={styles.colored}>SOLD OUT! 🚀🚀</h3>
         <ExternalLink url="https://opensea.io/collection/snakesproject">
           <Button>{`Buy on OpenSea 🐍`}</Button>
         </ExternalLink>

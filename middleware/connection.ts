@@ -1,10 +1,9 @@
 import { ethers } from "ethers";
-import type { UntitledSnakesProject } from "types";
 import CONTRACT from "contracts/UntitledSnakesProject.json";
 
 const provider = new ethers.providers.InfuraProvider(
   Number(process.env.NEXT_PUBLIC_CHAIN_ID),
-  [process.env.INFURA_KEY]
+  [process.env.NEXT_PUBLIC_INFURA_ID]
 );
 
 const wallet = new ethers.Wallet(
@@ -18,6 +17,6 @@ const contract = new ethers.Contract(
   process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string,
   CONTRACT.abi,
   signer
-) as UntitledSnakesProject;
+);
 
 export { provider, contract };

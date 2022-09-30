@@ -9,7 +9,6 @@ import {
   FaqSection,
 } from "fragments";
 import { Separator } from "components";
-import styles from "styles/Home.module.css";
 
 const Home = () => (
   <Layout
@@ -17,7 +16,7 @@ const Home = () => (
     description="NFT collection of 6,666 Snakes slithering on the Ethereum blockchain 🐍"
   >
     <NavBar />
-    <main className={styles.main}>
+    <main className="flex flex-col justify-center mx-auto w-full max-w-[1120px] px-8 md:px-12 xl:px-0">
       <HeroSection />
       <Separator />
       <MintSection />

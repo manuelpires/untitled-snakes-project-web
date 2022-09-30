@@ -9,9 +9,11 @@ import MemberCard from "./MemberCard";
 import MintPanel from "./MintPanel";
 import NavBarLinksGroup from "./NavBarLinksGroup";
 import PendingNotification from "./PendingNotification";
+import RoundButton from "./RoundButton";
 import SectionHeader from "./SectionHeader";
 import Separator from "./Separator";
 import Web3Connect from "./Web3Connect";
+import Web3Provider from "./Web3Provider";
 
 export {
   AccountLink,
@@ -25,7 +27,9 @@ export {
   MintPanel,
   NavBarLinksGroup,
   PendingNotification,
+  RoundButton,
   SectionHeader,
   Separator,
   Web3Connect,
+  Web3Provider,
 };

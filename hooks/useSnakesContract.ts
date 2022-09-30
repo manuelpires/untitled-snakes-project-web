@@ -1,73 +1,67 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState } from "react";
 import { BigNumber } from "ethers";
-import { useContract } from "hooks";
+import {
+  useContractReads,
+  usePrepareContractWrite,
+  useContractWrite,
+} from "wagmi";
 import CONTRACT from "contracts/UntitledSnakesProject.json";
-import type { UntitledSnakesProject } from "types";
+
+const snakesContract = {
+  addressOrName: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string,
+  contractInterface: CONTRACT.abi,
+};
+
+const reads = ["isSaleActive", "price", "totalSupply"];
 
 const useSnakesContract = () => {
-  const contract = useContract<UntitledSnakesProject>(
-    process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string,
-    CONTRACT.abi
-  );
-
-  const [isContractStateLoading, setIsContractStateLoading] = useState(true);
-  const [isSoldOut, setIsSoldOut] = useState(false);
-
-  // CONTRACT CONSTANTS
   const maxSupply = 6666;
   const maxMintPerTx = 10;
-  const [price, setPrice] = useState<BigNumber>();
 
-  const getPrice = useCallback(async () => {
-    if (contract) {
-      const contractPrice = await contract.price();
-      setPrice(contractPrice);
-    }
-  }, [contract]);
-
-  // CONTRACT VARIABLES
+  const [amount, setAmount] = useState(1);
   const [isSaleActive, setIsSaleActive] = useState(false);
-  const [currentSupply, setCurrentSupply] = useState<number>();
+  const [isSoldOut, setIsSoldOut] = useState(false);
+  const [price, setPrice] = useState<BigNumber>();
+  const [totalSupply, setTotalSupply] = useState<number>();
 
-  const getContractVariables = useCallback(async () => {
-    if (contract) {
-      const contractIsSaleActive = await contract.isSaleActive();
-      setIsSaleActive(contractIsSaleActive);
-      const contractCurrentSupply = await contract.totalSupply();
-      setCurrentSupply(contractCurrentSupply.toNumber());
-      setIsSoldOut(contractCurrentSupply.toNumber() === maxSupply);
-    }
-  }, [contract, maxSupply]);
+  const { isLoading: isStateLoading } = useContractReads({
+    contracts: reads.map((functionName) => ({
+      ...snakesContract,
+      functionName,
+    })),
+    onSuccess(data) {
+      setIsSaleActive(!!data[0]);
+      setPrice(BigNumber.from(data[1]));
+      setTotalSupply(data[2].toNumber());
+      setIsSoldOut(data[2].toNumber() >= maxSupply);
+    },
+    watch: true,
+  });
 
-  // FIRST LOAD
-  const runFirstLoad = useCallback(async () => {
-    await getPrice();
-    await getContractVariables();
-    setIsContractStateLoading(false);
-  }, [getPrice, getContractVariables]);
+  const { config } = usePrepareContractWrite({
+    ...snakesContract,
+    functionName: "mint",
+    args: [amount],
+    overrides: {
+      value: price?.mul(amount),
+    },
+  });
 
-  useEffect(() => {
-    runFirstLoad();
-  }, [runFirstLoad]);
-
-  // SUBSEQUENT INTERVAL LOADS
-  useEffect(() => {
-    const interval = setInterval(() => {
-      getContractVariables();
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [getContractVariables]);
+  const { writeAsync: mint, isLoading: isMintLoading } =
+    useContractWrite(config);
 
   return {
-    contract,
-    currentSupply,
-    isContractStateLoading,
+    amount,
+    isMintLoading,
+    isStateLoading,
     isSaleActive,
     isSoldOut,
-    maxSupply,
     maxMintPerTx,
+    maxSupply,
+    mint,
     price,
-    getContractVariables,
+    setAmount,
+    totalSupply,
   };
 };
 

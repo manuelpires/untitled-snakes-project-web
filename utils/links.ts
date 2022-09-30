@@ -2,7 +2,7 @@ import { etherscanBlockExplorers } from "wagmi";
 import OpenSeaLogo from "public/icons/opensea-logo.svg";
 import EtherscanLogo from "public/icons/etherscan-logo.svg";
 import TwitterLogo from "public/icons/twitter-logo.svg";
-import type { ChainName } from "types";
+import CHAIN_NAME from "utils/chainName";
 
 export const navBarLinks = [
   {
@@ -39,10 +39,7 @@ export const externalLinks = [
     alt: "OpenSea",
   },
   {
-    url: `${
-      etherscanBlockExplorers[process.env.NEXT_PUBLIC_CHAIN_NAME as ChainName]
-        .url
-    }/address/${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}`,
+    url: `${etherscanBlockExplorers[CHAIN_NAME].url}/address/${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}`,
     image: EtherscanLogo,
     alt: "Etherscan",
   },

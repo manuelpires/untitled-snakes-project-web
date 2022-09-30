@@ -1,3 +1,5 @@
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -14,6 +16,10 @@ html {
   color: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   margin: 0;
 }
@@ -23,8 +29,9 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+p, ul {
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 :root {

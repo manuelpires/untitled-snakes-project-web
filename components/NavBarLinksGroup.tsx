@@ -10,7 +10,7 @@ const NavBarLinksGroup = () => (
             text-xl font-semibold duration-200 
           first:text-green-500
           hover:text-sky-500
-        `}
+          `}
         >
           {label}
         </a>

@@ -16,11 +16,7 @@ const Web3Connect = ({ children, isSmall = false }: Props) => {
 
   useEffect(() => {
     if (isConnected) {
-      if (chain?.id === chains[0].id) {
-        setWrongChain(false);
-      } else {
-        setWrongChain(true);
-      }
+      setWrongChain(chain?.id !== chains[0].id);
     }
   }, [isConnected, chain, chains, switchNetwork]);
 

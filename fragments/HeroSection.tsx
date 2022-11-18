@@ -14,10 +14,10 @@ const HeroSection = () => (
     >
       <h1
         className={`
-        text-7xl bg-gradient-160 from-sky-500 to-green-500 w-fit bg-clip-text text-transparent
-        md:text-[8.5rem]
-        xl:leading-[10rem]
-      `}
+          text-7xl bg-gradient-160 from-sky-500 to-green-500 w-fit bg-clip-text text-transparent
+          md:text-[8.5rem]
+          xl:leading-[10rem]
+        `}
       >
         Untitled Snakes Project
       </h1>

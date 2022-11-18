@@ -6,9 +6,9 @@ const SpeciesSection = () => (
   <Section id="species" title="Species">
     <div
       className={`
-      flex flex-col items-center gap-8
-      lg:flex-row lg:gap-16
-    `}
+        flex flex-col items-center gap-8
+        lg:flex-row lg:gap-16
+      `}
     >
       <div className="max-w-[350px] w-full">
         <Image

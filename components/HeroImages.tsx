@@ -19,7 +19,7 @@ const HeroImages = () => {
           className={`
             max-w-[147px]
             md:max-w-[236px]
-        `}
+          `}
         >
           <Image
             className={`

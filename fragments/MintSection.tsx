@@ -8,9 +8,9 @@ const MintSection = () => (
   <Section id="mint" title="Mint">
     <div
       className={`
-      flex flex-col items-center gap-8
-      lg:flex-row lg:gap-16
-    `}
+        flex flex-col items-center gap-8
+        lg:flex-row lg:gap-16
+      `}
     >
       <div className="w-full max-w-[350px]">
         <Image

@@ -20,17 +20,6 @@ const FaqSection = () => (
         </p>
       </li>
       <li>
-        <b>Will there be any giveaways?</b>
-        <p>
-          Yes, I&apos;m planning to launch some giveaways in both Proof Of
-          Humanity community calls and on{" "}
-          <ExternalLink url="https://twitter.com/snakesproject">
-            <span className="text-green-500">Twitter</span>
-          </ExternalLink>
-          . Stay tuned for that!
-        </p>
-      </li>
-      <li>
         <b>Can I mint if I&apos;m not registered on Proof Of Humanity?</b>
         <p>
           Yes, you can. There&apos;s no allowlist so you can mint from any
